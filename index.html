@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Request</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -16,82 +25,87 @@
             <p id="description">Contact our technical service and we will get in touch within 24 hours</p>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <h3>Service Form</h3>
+            <form id="survey-form">
+                <fieldset>
+                    <legend>Enter your main information</legend>
+                    <label for="name" id="name-label" class="enter-label">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                    <label for="email" id="email-label" class="enter-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                    <label for="company" class="enter-label">Company</label>
+                    <input type="text" name="company" id="company" placeholder="Enter your Company Name">
+                    <label for="number" id="number-label" class="enter-label">Devices <span>(Optional)</span></label>
+                    <input type="number" name="devices" id="number" min="1" max="10" placeholder="Enter the number of Devices you have">
+                    <label for="city" class="enter-label">City</label>
+                    <select id="dropdown">
+                        <option disabled selected>Select your city</option>
+                        <option value="2">Dubai</option>
+                        <option value="3">Sharjah</option>
+                        <option value="4">Abu Dhabi</option>
+                        <option value="5">Al Ain</option>
+                        <option value="6">Ajman</option>
+                        <option value="7">Fujairah</option>
+                        <option value="8">Ras Al Khaima</option>
+                        <option value="9">Umm Al Quwain</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Choose type of the device</legend>
+                    <label>
+                        <input type="radio" name="type" value="home-device" class="device-type">
+                        Home Device
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="work-device" class="device-type">
+                        Work Device
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="car-device" class="device-type">
+                        Car Device
+                    </label>
+                </fieldset>
 
-    <div class="container">
-        <h3>Service Form</h3>
-        <form id="survey-form">
-            <fieldset>
-                <legend>Enter your main information</legend>
-                <label for="name" id="name-label">Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter your Name" required>
-                <label for="email" id="email-label">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-                <label for="company">Company</label>
-                <input type="text" name="company" id="company" placeholder="enter your Company Name">
-                <label for="number" id="number-label">Devices <span>(Optional)</span></label>
-                <input type="number" name="devices" id="number" min="1" max="10" placeholder="Enter the number of Devices you have">
-                <label for="city">City</label>
-                <select id="dropdown">
-                    <option value="2">Dubai</option>
-                    <option value="3">Sharjah</option>
-                    <option value="4">Abu Dhabi</option>
-                    <option value="5">Al Ain</option>
-                    <option value="6">Ajman</option>
-                    <option value="7">Fujairah</option>
-                    <option value="8">Ras Al Khaima</option>
-                    <option value="9">Umm Al Quwain</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <legend>Choose type of the device</legend>
-                <label>
-                    <input type="radio" name="type" value="home-device" class="device-type">
-                    Home Device
-                </label>
-                <label>
-                    <input type="radio" name="type" value="work-device" class="device-type">
-                    Work Device
-                </label>
-                <label>
-                    <input type="radio" name="type" value="car-device" class="device-type">
-                    Car Device
-                </label>
-            </fieldset>
+                <fieldset>
+                    <legend>
+                        Please check which best descripe your device problem
+                    </legend>
 
-            <fieldset>
-                <legend>
-                    Please check which best descripe your device problem
-                </legend>
-
-                <label>
-                    <input type="checkbox" value="device-not-working" class="common-problem">
-                    Device not working
-                </label>
-                <label>
-                    <input type="checkbox" value="no-signal" class="common-problem">
-                    No signal
-                </label>
-                <label>
-                    <input type="checkbox" value="red-light" class="common-problem">
-                    Red Light indicator
-                </label>
-                <label>
-                    <input type="checkbox" value="other" class="common-problem">
-                    Other
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Please write if you have other comments</legend>
-                <textarea id="comments" type="textarea" name="comment" placeholder="Enter your comment here">
-                </textarea>
-            </fieldset>
-
-            <input type="submit" name="submit" id="submit">
+                    <label>
+                        <input type="checkbox" value="device-not-working" class="common-problem">
+                        Device not working
+                    </label>
+                    <label>
+                        <input type="checkbox" value="no-signal" class="common-problem">
+                        No signal
+                    </label>
+                    <label>
+                        <input type="checkbox" value="red-light" class="common-problem">
+                        Red Light indicator
+                    </label>
+                    <label>
+                        <input type="checkbox" value="other" class="common-problem">
+                        Other
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Please write if you have other comments</legend>
+                    <textarea id="comments" type="textarea" name="comment" placeholder="Enter your comment here">
+                    </textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
 
 
 
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
+
+
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
